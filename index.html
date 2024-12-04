@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sacle=1.0">
+    <title>Kymakipos</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header class="header-main">
+        <nav>
+            <a href="index.html">Index</a>
+            <a href="codex.html">Codex</a>
+            <a href="store.html">Store</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+    <aside>
+
+    </aside>
+    <main>
+        <div class="stars"></div>
+        <div class="nebucolor"></div>
+        <h2>Kymakipos</h2>
+        <style> h2{ line-height: 108px; } </style>
+        <h1>Welcome To The Wave Garden</h1> <br> 
+        <a href="codex.html"><img class="fibtun" id="mainIMG" src="img/universe01.png" alt="optical illusion art"></a>
+    </main>
+    <audio id="player">
+        <source src="sfx/wehaveheavenclip.mp3" type="audio/mp3">
+        Your browser is not playing a sound that belongs here.
+    </audio>
+    <footer>
+
+    </footer>
+
+    <script>
+        const image = document.getElementById('mainIMG');
+        const audio = document.getElementById('player');
+        image.addEventListener('mouseover', 
+            function(){ audio.load(); audio.play(); });
+        image.addEventListener('mouseleave',
+            function(){ audio.pause(); audio.currentTime = 0; });
+        audio.volume =0.25;
+    </script>
+</body>
+</html>
