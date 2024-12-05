@@ -1,0 +1,95 @@
+/* Ensure the body fills the screen and has a background image */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: rgb(26, 26, 26);
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+/* Header navigation */
+.header-main{
+    width: 100%;
+    position: fixed;
+    height: 72px;
+    background-color: black;
+    z-index: 4;
+}
+/* Main container for layout */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    height: calc(100vh - 72px); /* Subtract header height */
+    position: relative;
+    margin-top: 72px; /* Add space to account for fixed header */
+}
+/* Buttons */
+.page-turn-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: url(../img/cursor2.png) 15 15, pointer;
+    padding: 0;
+    z-index: 5;
+}
+.page-turn-button img {
+    width: 108px; /* Adjust size as needed */
+    height: auto;
+}
+.page-turn-button.left {
+    left: 6px;
+}
+.page-turn-button.right {
+    right: 6px;
+}
+/* Center Images */
+.cover-image{
+    position: absolute;
+    z-index: 2; /* Ensure it appears above other content */
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+.center-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0; /* Ensure the pages touch */
+    width: 100%;
+    height: 100%;
+}
+.center-images img {
+    width: 33%;
+    height: auto;
+}
+#rightImageContainer {
+    position: relative; /* Establish a positioning context for properfly.gif */
+    max-width: 33%; /* Match the right page size */
+    height: auto;
+}
+#properfly {
+    position: absolute; /* Positioned relative to the #centerImages container */
+    transform: translate(-50%, -50%); /* Center within its designated area */
+    width: 50%; /* Adjust to a percentage of the right image */
+    left: 75%; /* Center horizontally in the bottom half of the right page */
+    top: 75%; /* Center vertically in the bottom half */
+    pointer-events: none; /* Prevent interaction */
+    z-index: 10;
+}
+.iframe-section {
+    position: absolute; 
+    top: 9px;  
+    right: 2%; 
+    z-index: 10; 
+    padding: 10px;  
+    border-radius: 8px;  
+}
+.iframe-section iframe {
+    max-width: 100%; 
+    height: auto;
+}

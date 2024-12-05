@@ -1,0 +1,41 @@
+main {
+    display: flex;
+    min-height: 100vh; /* Ensure the page covers the full height */
+}
+.albums{
+    width: 72%;
+    height: 99%;
+    border-radius: 8px;
+    background-color: black;
+    position:absolute;
+    justify-content: left;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.row section{
+    width: 36%;
+}
+.biocea{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.partial-dukes{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.what-were-you-before{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.doingMuch{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
