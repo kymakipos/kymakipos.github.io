@@ -1,13 +1,33 @@
-// JavaScript for handling page turning
+//page turning
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 const coverImage = document.getElementById("coverImage");
 const leftImage = document.getElementById("leftImage");
 const rightImage = document.getElementById("rightImage");
-// Array of images for the codex
 const pages = ["img/cover.png", "img/page01.png", "img/page02.png", "img/page03.png", "img/page04.png", "img/page05.png", "img/page06.png", "img/page07.png", "img/page08.png", "img/page09.png", "img/page10.png", "img/page11.png"];
 let currentPage = 0;
-// Function to update the displayed pages
+
+function positionGif() {
+    const gifImage = document.getElementById("properfly");
+    const rightImage = document.getElementById("rightImage");
+    if (gifImage.style.display === "block") {
+        const rightImageRect = rightImage.getBoundingClientRect(); 
+        const centerImagesRect = rightImage.offsetParent.getBoundingClientRect(); 
+        const gifWidth = rightImageRect.width * 0.55;
+        const gifLeft = rightImageRect.left - centerImagesRect.left + rightImageRect.width / 2;
+        const gifTop = rightImageRect.top - centerImagesRect.top + rightImageRect.height * 0.768;
+        gifImage.style.left = `${gifLeft}px`;
+        gifImage.style.top = `${gifTop}px`;
+        gifImage.style.width = `${gifWidth}px`;
+        gifImage.style.height = "auto";
+        //gifImage.style.transform = "translate(-50%, -50%)";
+
+        const parentRect = gifImage.offsetParent.getBoundingClientRect();
+        console.log("Offset Parent Dimensions:", parentRect);
+        console.log("GIF Position:", gifImage.style.left, gifImage.style.top);
+    }
+}
+window.addEventListener("resize", positionGif);
 function updatePages() {
     const gifImage = document.getElementById("properfly");
     if (currentPage === 0) {
@@ -17,7 +37,7 @@ function updatePages() {
         rightImage.style.display = "none";
         prevButton.style.display = "none";
         nextButton.style.display = "block";
-        if (gifImage) gifImage.style.display = "none"; // Hide gif
+        gifImage.style.display = "none";
     } else if (currentPage >= pages.length - 1) {
         // Last page
         coverImage.style.display = "none";
@@ -27,7 +47,7 @@ function updatePages() {
         rightImage.style.display = "block";
         prevButton.style.display = "block";
         nextButton.style.display = "none";
-        if (gifImage) gifImage.style.display = "none"; // Hide gif
+        gifImage.style.display = "none";
     } else {
         // Normal two-page layout
         coverImage.style.display = "none";
@@ -38,21 +58,15 @@ function updatePages() {
         prevButton.style.display = "block";
         nextButton.style.display = "block";
 
-        // Show gif on the fourth set of pages
+        // gif on the fourth set of pages
         if (currentPage >= 8 && currentPage <= 9) {
             gifImage.style.display = "block";
-
-            // Position gif relative to rightImage
-            const rightImageRect = rightImage.getBoundingClientRect();
-            gifImage.style.left = `${rightImageRect.left + rightImageRect.width * 0.25}px`;
-            gifImage.style.top = `${rightImageRect.top + rightImageRect.height * 0.75}px`;
-            gifImage.style.width = `${rightImageRect.width * 0.5}px`;
+            positionGif();
         } else {
             gifImage.style.display = "none";
         }
     }
 }
-// Event listeners for buttons
 nextButton.addEventListener("click", () => {
     if (currentPage < pages.length - 1) {
         currentPage += 2;
@@ -65,9 +79,9 @@ prevButton.addEventListener("click", () => {
         updatePages();
     }
 });
-// Add hover effect for the left page
+// hover effect for the left page
 leftImage.addEventListener("mouseenter", () => {
-    if (currentPage >= 8 && currentPage <= 9) { // Ensure it's the fourth set of pages
+    if (currentPage >= 8 && currentPage <= 9) {
         leftImage.src = "img/page07enphon.png";
     }
 });
@@ -76,5 +90,4 @@ leftImage.addEventListener("mouseleave", () => {
         leftImage.src = pages[currentPage - 1];
     }
 });
-// Initialize with the cover
 updatePages();
