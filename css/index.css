@@ -29,6 +29,7 @@ p {
     height: auto;
     position: relative;
     left: 32%;
+    z-index: 10;
 }
 #mainIMG{
     width: 24%;

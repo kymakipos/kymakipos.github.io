@@ -12,7 +12,7 @@ body {
 .header-main{
     width: 100%;
     position: fixed;
-    height: 72px;
+    height: 7vh;
     background-color: black;
     z-index: 4;
 }
@@ -80,13 +80,22 @@ body {
 }
 .iframe-section {
     position: absolute; 
-    top: 9px;  
+    top: 50%;  
     right: 2%; 
+    transform: translateY(-50%);    
     z-index: 10; 
     padding: 10px;  
     border-radius: 8px;  
+    max-width: 453px;
 }
 .iframe-section iframe {
     max-width: 100%; 
     height: auto;
+}
+@media (max-width: 1440px) {
+    .iframe-section {
+        position: static; /* Makes it flow inline */
+        margin-top: 10px; /* Add spacing below navbar */
+        transform: none; /* Remove centering transform */
+    }
 }
