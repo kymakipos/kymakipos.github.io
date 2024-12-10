@@ -30,14 +30,12 @@ p {
 }
 #wunforesh1{
     width: 36%;
+    min-width: 250px;
     height: auto;
     position: relative;
-    left: 32%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10;
-}
-#mainIMG{
-    width: 24vw;
-    height: auto;
 }
 @keyframes move-nebucolor {
     from {background-position: 0 0;}
@@ -67,4 +65,21 @@ p {
     opacity: 0.072;
     z-index: -1;
     animation: move-nebucolor 200s linear infinite;
+}
+.fibtun {
+    display: block;
+    margin-left: 50%;
+    margin-right: auto;
+    width: 24vw;
+    transform: translateX(-50%);
+    z-index:3;
+}
+.fibtun:hover {
+    content: url(../img/mendale.gif);
+    z-index:3;
+}
+#mainIMG{
+    width: 24vw;
+    min-width: 210px;
+    height: auto;
 }

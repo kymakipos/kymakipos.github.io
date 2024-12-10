@@ -22,9 +22,9 @@ body {
     align-items: center;
     justify-content: center;
     width: 99%;
-    height: calc(100vh - 72px); /* Subtract header height */
+    /*height: calc(100vh - 72px);  Subtract header height */
     position: relative;
-    margin-top: 72px; /* Add space to account for fixed header */
+    margin-top: 10vh; /* Add space to account for fixed header */
 }
 /* Buttons */
 .page-turn-button {
@@ -54,16 +54,14 @@ body {
     z-index: 2; /* Ensure it appears above other content */
     max-width: 100%;
     max-height: 100%;
-    margin: auto;
+    /*margin: auto;*/
 }
 .center-images {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 0; /* Ensure the pages touch */
     width: 100%;
-    height: 100%;
 }
 .center-images img {
     width: 33%;
@@ -96,6 +94,10 @@ body {
     .iframe-section {
         position: static; /* Makes it flow inline */
         margin-top: 10px; /* Add spacing below navbar */
-        transform: none; /* Remove centering transform */
+        margin-left: 50%;
+        transform: translateX(-50%); /* Remove centering transform */
+    }
+    .main-container {
+        top: 12vh;
     }
 }

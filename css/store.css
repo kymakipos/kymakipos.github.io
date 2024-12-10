@@ -1,5 +1,6 @@
 main {
     display: flex;
+    flex-wrap: nowrap;
     min-height: 100vh; /* Ensure the page covers the full height */
 }
 
@@ -82,4 +83,41 @@ main {
     font-weight: 700;
     color: black;
     margin: 24px 0;
+}
+
+@media (max-width: 1000px) {
+    main {
+        flex-wrap: wrap; /* Allow items to wrap */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .right-box {
+        order: -1; /* Place right box above left box */
+        width: 100%; /* Full width for the right box */
+        padding: 10px; /* Adjust padding for smaller viewports */
+        background-color: #110d08; /* Dark Brown background */
+    }
+
+    .left-box {
+        order: 0;
+        width: 100%; /* Full width for the left box */
+        padding: 10px; /* Adjust padding for smaller viewports */
+    }
+}
+@media (max-width: 480px) {
+    .left-box, .right-box {
+        padding: 8px;
+    }
+
+    .left-box .image-container img {
+        width: calc(100% - 10px); /* Adjust image size for smaller screens */
+    }
+
+    .right-box {
+        padding: 8px;
+    }
+
+    .beige-box p {
+        font-size: 16px; /* Adjust font size for readability */
+    }
 }
