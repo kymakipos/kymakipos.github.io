@@ -82,7 +82,7 @@ prevButton.addEventListener("click", () => {
 // hover effect for the left page
 leftImage.addEventListener("mouseenter", () => {
     if (currentPage >= 8 && currentPage <= 9) {
-        leftImage.src = "img/page07enphon.png";
+        leftImage.src = "img/page07en.png";
     }
 });
 leftImage.addEventListener("mouseleave", () => {
