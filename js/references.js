@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".grid-item a").forEach(link => {
+        link.setAttribute("target", "_blank");
+    });
+    
     const smallImage = document.querySelector(".numRefSheet");
-
     let overlay = document.createElement("div");
     overlay.classList.add("image-overlay");
     overlay.innerHTML = `
