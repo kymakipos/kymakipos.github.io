@@ -7,6 +7,13 @@ body, html {
     height: 100vh;
 }
 
+h2 {
+    text-align: center;
+    margin-top: 1vh;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+}
 .numRefSheet {
     position: relative;
     top: 6vh; 
