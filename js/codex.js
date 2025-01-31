@@ -79,6 +79,20 @@ prevButton.addEventListener("click", () => {
         updatePages();
     }
 });
+//Listen for keyboard arrow keys
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+        if(currentPage < pages.length - 1) {
+            currentPage += 2;
+            updatePages();
+        }
+    } else if (event.key === "ArrowLeft") {
+        if (currentPage > 0) {
+            currentPage -= 2;
+            updatePages();
+        }
+    }
+});
 // hover effect for the left page
 leftImage.addEventListener("mouseenter", () => {
     if (currentPage >= 8 && currentPage <= 9) {

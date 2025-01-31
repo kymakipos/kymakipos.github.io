@@ -42,9 +42,8 @@ a:visited{ color: coral;}
     width: 100%;
     height: 7vh;
     background-color: black;
-    /* Gradient shadow beneath the header */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.95), /* Regular shadow */
-                0 5px 10px rgba(0, 0, 0, 0.2); /* Light gradient-like shadow */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.95), /* regular shadow */
+                0 5px 10px rgba(0, 0, 0, 0.2); /* gradient shadow */
     position: relative;
     z-index: 4;
 }
