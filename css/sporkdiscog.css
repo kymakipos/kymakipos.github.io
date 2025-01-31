@@ -1,6 +1,6 @@
 main {
     display: flex;
-    min-height: 100vh; /* Ensure the page covers the full height */
+    min-height: 100vh;
 }
 .albums{
     width: 72%;

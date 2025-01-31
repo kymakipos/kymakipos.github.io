@@ -1,4 +1,3 @@
-/* Ensure the body fills the screen and has a background image */
 body {
     margin: 0;
     padding: 0;
@@ -6,9 +5,8 @@ body {
     background: rgb(26, 26, 26);
     background-size: cover;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column; 
 }
-/* Header navigation */
 .header-main{
     width: 100%;
     position: fixed;
@@ -16,17 +14,14 @@ body {
     background-color: black;
     z-index: 4;
 }
-/* Main container for layout */
 .main-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 99%;
-    /*height: calc(100vh - 72px);  Subtract header height */
     position: relative;
-    margin-top: 10vh; /* Add space to account for fixed header */
+    margin-top: 10vh; 
 }
-/* Buttons */
 .page-turn-button {
     position: absolute;
     top: 50%;
@@ -48,19 +43,17 @@ body {
 .page-turn-button.right {
     right: 2vw;
 }
-/* Center Images */
 .cover-image{
     position: absolute;
-    z-index: 2; /* Ensure it appears above other content */
+    z-index: 2; 
     max-width: 100%;
     max-height: 100%;
-    /*margin: auto;*/
 }
 .center-images {
     position: relative;
     display: flex;
     justify-content: center;
-    gap: 0; /* Ensure the pages touch */
+    gap: 0;
     width: 100%;
 }
 .center-images img {
@@ -71,10 +64,10 @@ body {
     position: relative; 
 }
 #properfly {
-    position: absolute; /* Positioned dynamically by JavaScript */
-    pointer-events: none; /* Prevent interaction */
-    z-index: 10; /* Ensure it appears above the right image */
-    transform: translate(-50%, -50%); /* Center the GIF */
+    position: absolute; /* js positioning */
+    pointer-events: none; 
+    z-index: 10; 
+    transform: translate(-50%, -50%); 
 }
 .iframe-section {
     position: absolute; 
@@ -92,10 +85,10 @@ body {
 }
 @media (max-width: 1440px) {
     .iframe-section {
-        position: static; /* Makes it flow inline */
-        margin-top: 10px; /* Add spacing below navbar */
+        position: static;
+        margin-top: 10px;
         margin-left: 50%;
-        transform: translateX(-50%); /* Remove centering transform */
+        transform: translateX(-50%);
     }
     .main-container {
         top: 12vh;

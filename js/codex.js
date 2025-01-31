@@ -1,4 +1,4 @@
-//page turning
+//Virtual Book V1.05
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 const coverImage = document.getElementById("coverImage");
@@ -31,7 +31,7 @@ window.addEventListener("resize", positionGif);
 function updatePages() {
     const gifImage = document.getElementById("properfly");
     if (currentPage === 0) {
-        // Show cover only
+        // cover
         coverImage.style.display = "block";
         leftImage.style.display = "none";
         rightImage.style.display = "none";
@@ -39,7 +39,7 @@ function updatePages() {
         nextButton.style.display = "block";
         gifImage.style.display = "none";
     } else if (currentPage >= pages.length - 1) {
-        // Last page
+        // last page
         coverImage.style.display = "none";
         leftImage.src = pages[currentPage - 1];
         rightImage.src = pages[currentPage];
@@ -49,7 +49,7 @@ function updatePages() {
         nextButton.style.display = "none";
         gifImage.style.display = "none";
     } else {
-        // Normal two-page layout
+        // two-page layout
         coverImage.style.display = "none";
         leftImage.src = pages[currentPage - 1];
         rightImage.src = pages[currentPage];
@@ -58,7 +58,6 @@ function updatePages() {
         prevButton.style.display = "block";
         nextButton.style.display = "block";
 
-        // gif on the fourth set of pages
         if (currentPage >= 8 && currentPage <= 9) {
             gifImage.style.display = "block";
             positionGif();
@@ -79,7 +78,6 @@ prevButton.addEventListener("click", () => {
         updatePages();
     }
 });
-//Listen for keyboard arrow keys
 document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight") {
         if(currentPage < pages.length - 1) {
@@ -100,7 +98,7 @@ leftImage.addEventListener("mouseenter", () => {
     }
 });
 leftImage.addEventListener("mouseleave", () => {
-    if (currentPage >= 8 && currentPage <= 9) { // Restore original left page
+    if (currentPage >= 8 && currentPage <= 9) { // restore original left page
         leftImage.src = pages[currentPage - 1];
     }
 });

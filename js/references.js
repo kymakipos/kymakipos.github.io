@@ -14,19 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let isDragging = false, startX, startY, lastX = 0, lastY = 0;
 
-    // Open overlay
+    // open overlay
     smallImage.addEventListener("click", () => {
         overlay.classList.add("active");
         smallImage.style.display = "none"; 
     });
 
-    // Close overlay
+    // close overlay
     closeButton.addEventListener("click", () => {
         overlay.classList.remove("active");
         smallImage.style.display = "block"; 
     });
 
-    // Dragging functionality
+    // dragging functionality
     fullImage.addEventListener("mousedown", (e) => {
         e.preventDefault();
         isDragging = true;
