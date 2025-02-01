@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sacle=1.0">
+    <title>Kymakipos Codex</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/codex.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    <header class="header-main">
+        <nav>
+            <a href="index.html">Index</a>
+            <a href="codex.html">Codex</a>
+            <a href="const.html">Store</a>
+            <a href="references.html">References</a>
+        </nav>
+        <section class="iframe-section">
+            <iframe style="border: 0; width: 453px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2025299944/size=small/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="https://regeniversity.bandcamp.com/album/tellurica-original-soundtrack">Tellurica Original Soundtrack by Regeniversity</a></iframe>          
+        </section>
+    </header>
+    <main class="main-container">
+        <button class="page-turn-button left" id="prevButton" style="display: none;">
+            <img src="img/LeftPageTurn.png" alt="Previous Page">
+        </button>
+
+        <div class="center-images" id="centerImages">
+            <a href="ibdogu.html" class="langLink" style="display:none;"></a> 
+            <img src="img/page01.png" alt="Left Page" id="leftImage" style="display:none;">
+            <img src="img/cover.png" alt="Kymakipos Cover Page" id="coverImage" style="display:none;">
+            <img src="img/page02.png" alt="Right Page" id="rightImage" style="display:none;">
+            <img id="properfly" src="img/properfly.gif" style="display: none; position: absolute;">
+        </div>
+
+        <button class="page-turn-button right" id="nextButton" style="display: none;">
+            <img src="img/RightPageTurn.png" alt="Next Page">
+        </button>
+    </main>
+    <script src="js/codex.js"></script>
+</body>
+</html>
