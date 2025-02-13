@@ -2,3 +2,25 @@ h2 {
     text-align: center;
     line-height: 12vh;
 }
+#ibdoguTitle {
+    width: 24vw;
+    min-width: 250px;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+#ibdoguAlphabet {
+    width: 36vw;
+    min-width: 360px;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.constAnnounce {
+    width: 99vw;
+    height: auto;
+}

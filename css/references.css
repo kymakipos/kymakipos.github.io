@@ -19,7 +19,7 @@ h2 {
     top: 6vh; 
     left: 50%;
     transform: translateX(-50%);
-    width: 20vw;
+    width: 27vw;
     max-width: 100%;
     z-index: 2;
     cursor: pointer;
@@ -56,9 +56,9 @@ h2 {
     position: absolute;
     top: 40px; 
     right: 40px; 
-    font-size: 60px; 
+    font-size: 72px; 
     background: white;
-    border: 2px solid black;
+    border: 5px solid black;
     cursor: pointer;
     z-index: 10;
     display: block;
@@ -67,8 +67,8 @@ h2 {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(252px, 1fr));
-    gap: 2px;
-    width: 100vw;
+    gap: 16px;
+    width: 100%;
     padding: 40px 10px 10px; 
     background-color: #e2e1dd;
 }
