@@ -4,7 +4,9 @@ const nextButton = document.getElementById("nextButton");
 const coverImage = document.getElementById("coverImage");
 const leftImage = document.getElementById("leftImage");
 const rightImage = document.getElementById("rightImage");
-const pages = ["img/cover.png", "img/page01.png", "img/page02.png", "img/page03.png", "img/page04.png", "img/page05.png", "img/page06.png", "img/page07.png", "img/page08.png", "img/page09.png", "img/page10.png", "img/page11.png", "img/page12.png"];
+const pages = ["img/cover.png", "img/page01.png", "img/page02.png", "img/page03.png", "img/page04.png", "img/page05.png", "img/page06.png", 
+               "img/page07.png", "img/page08.png", "img/page09.png", "img/page10.png", "img/page11.png", "img/page12.png", "img/page13.png", 
+               "img/page14.png"];
 
 let currentPage = 0;
 let imagesLoaded = 0;
