@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const fullImage = overlay.querySelector(".full-image");
     const closeButton = overlay.querySelector(".close-btn");
 
+    fullImage.draggable = false;
+
     let isDragging = false, startX, startY, lastX = 0, lastY = 0;
 
     // open overlay
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         smallImage.style.display = "block"; 
     });
 
-    // dragging functionality
+    // mouse dragging functionality
     fullImage.addEventListener("mousedown", (e) => {
         e.preventDefault();
         isDragging = true;
@@ -47,6 +49,26 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isDragging) return;
         lastX = e.clientX - startX;
         lastY = e.clientY - startY;
+        fullImage.style.transform = `translate(${lastX}px, ${lastY}px)`;
+    });
+
+    // touch dragging functionality
+    fullImage.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        isDragging = true;
+        startX = e.touches[0].clientX - lastX;
+        startY = e.touches[0].clientY - lastY;
+    });
+
+    document.addEventListener("touchend", () => {
+        isDragging = false;
+    });
+
+    document.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        lastX = e.touches[0].clientX - startX;
+        lastY = e.touches[0].clientY - startY;
         fullImage.style.transform = `translate(${lastX}px, ${lastY}px)`;
     });
 });

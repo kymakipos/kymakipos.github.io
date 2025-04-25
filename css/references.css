@@ -3,7 +3,6 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     background-color: #e2e1dd;
-    justify-content: center;
     height: 100vh;
 }
 
@@ -14,16 +13,37 @@ h2 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: large;
 }
+
+.image-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12vw;
+    margin-top: 3vh;
+}
+
+.youtube-embed-garden-song {
+    position: static;        
+    width: 24vw;             
+    height: 33vh;            
+    padding: 0;              
+    max-width: 420px;        
+    max-height: 236px;
+    min-width: 240px;
+    min-height: 150px;
+}
+.youtube-embed-garden-song iframe,
+.youtube-embed-garden-song embed {
+    width: 100%;
+    height: 100%;
+}
+
 .numRefSheet {
-    position: relative;
-    top: 6vh; 
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
     width: 27vw;
     max-width: 100%;
     z-index: 2;
     cursor: pointer;
-    margin-bottom: 6vh; 
     border: 2px solid black;
 }
 .image-overlay.active + .numRefSheet {
@@ -64,10 +84,8 @@ h2 {
     display: block;
 }
 
-.video-holder {
-    position: absolute;
-    left: 75vw;
-    top: 8vh;
+.sun-video-holder {
+    position: static;
     width: 15vw;
     height: auto;
     border: 2px solid #000;
@@ -79,14 +97,25 @@ video {
     max-width: 720px;
     height: auto;
 }
-@media (max-width: 1250px) {
-    .video-holder {
-        position: static;
-        width: 42vw;
-        margin-top: 10px;
-        margin-left: 50%;
-        transform: translateX(-50%);
+@media (max-width: 768px) {
+    .image-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
     }
+    .youtube-embed-garden-song,
+    .number-ref-sheet {
+        width: 80%;
+        height: 12vh; /* Consistent height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 420px;
+    }
+    .youtube-embed-garden-song { height: auto; }
+    .numRefSheet { width: 100%; }
+    .sun-video-holder { width: 80%; }
 }
 
 .grid-container {
