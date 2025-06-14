@@ -72,3 +72,51 @@ document.addEventListener("DOMContentLoaded", function () {
         fullImage.style.transform = `translate(${lastX}px, ${lastY}px)`;
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const thumbnail = document.querySelector('.pdf-thumb-img');
+    const modal = document.getElementById('pdfModal');
+    const pdfViewer = document.getElementById('pdfViewer');
+    const closeBtn = document.querySelector('.close-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const pdfPath = 'docs/Law_Understanding-Morality.pdf';
+    let currentPage = 1;
+    const totalPages = 3; // Your PDF has 3 pages
+
+    // Open modal on thumbnail click
+    thumbnail.addEventListener('click', () => {
+        pdfViewer.src = `${pdfPath}#page=${currentPage}`;
+        modal.style.display = 'flex';
+    });
+
+    // Close modal
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        pdfViewer.src = ''; // Reset to avoid memory issues
+    });
+
+    // Navigate to previous page
+    prevBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            pdfViewer.src = `${pdfPath}#page=${currentPage}`;
+        }
+    });
+
+    // Navigate to next page
+    nextBtn.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            pdfViewer.src = `${pdfPath}#page=${currentPage}`;
+        }
+    });
+
+    // Close modal on click outside content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            pdfViewer.src = '';
+        }
+    });
+});

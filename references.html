@@ -22,13 +22,18 @@
         <div class="youtube-embed-garden-song">
             <iframe src="vid/JohnDenver_GardenSong.mp4" 
                 title="John Denver Performs The Garden Song on The Muppets Show in 1979" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" 
                 referrerpolicy="strict-origin-when-cross-origin">
             </iframe>
         </div>
-        <div class="number-ref-sheet">
-            <img class="numRefSheet" src="img/geometryReference.png" alt="Reference sheet comparing frequencies, wavelengths, and proportions">
-            <h2 id="refSheetTitle">EM Frequency to Wavelength Proportional Number Sheet</h2>
+        <div class="reference-holder">
+            <div class="number-ref-sheet">
+                <img class="numRefSheet" src="img/geometryReference.png" alt="Reference sheet comparing frequencies, wavelengths, and proportions">
+                <h2 id="refSheetTitle">EM Frequency to Wavelength Proportional Number Sheet</h2>
+            </div>
+            <div class="law-thumbnail">
+                <img src="img/law_thumb.png" alt="Thumbnail of document Law Understanding the Morality of Humanity" class="pdf-thumb-img">
+            </div>
         </div>
         <div class="sun-video-holder">
             <video controls autoplay loop>
@@ -38,6 +43,16 @@
             <h3>The recent Sun at a wavelength of 193 Ångstroms (19.3 nanometers)</h3>
         </div>
     </div>
+
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-content">
+            <span class="close-btn">&times;</span>
+            <embed id="pdfViewer" src="" type="application/pdf">
+            <button class="nav-btn prev-btn">&larr;</button>
+            <button class="nav-btn next-btn">&rarr;</button>
+        </div>
+    </div>
+
     <div class="grid-container">
         <div class="grid-item">
             <a href="https://youtu.be/hCJfSYZqZ0Y?si=ajvBBD90JX8elpNL" class="overlay-link">What is a Food Forest with Geoff Lawton</a>
