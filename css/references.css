@@ -38,12 +38,39 @@ h2 {
     height: 100%;
 }
 
+.reference-holder {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0;
+}
+.number-ref-sheet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+}
+.law-thumbnail { 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
+}
+#refSheetTitle {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .number-ref-sheet, .law-thumbnail {
     flex: 0 1 auto;
     text-align: center;
 }
 .numRefSheet {
-    position: static;
+    display: flex;
     width: 27vw;
     max-width: 100%;
     z-index: 2;
@@ -88,14 +115,43 @@ h2 {
     display: block;
 }
 
-.reference-holder {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 20px 0;
+@media (max-width: 768px) {
+    .image-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px; 
+    }
+    .reference-holder {
+        flex-direction: column; 
+        align-items: center;
+        gap: 25px;
+        margin: 0;
+    }
+    .number-ref-sheet {
+        width: 80%; 
+        max-width: 420px;
+        margin-top: 50px;
+    }
+    .numRefSheet {
+        width: 100%;
+        height: auto; 
+        max-width: 100%;
+    }
+    .law-thumbnail {
+        width: 80%; 
+        max-width: 150px; 
+        margin-top: 25px;
+    }
+    .pdf-thumb-img {
+        max-width: 150px;
+        height: auto;
+    }
+    .sun-video-holder {
+        width: 80%;
+        max-width: 420px;
+    }
 }
+
 .pdf-thumb-img {
     max-width: 200px;
     height: auto;
@@ -128,23 +184,6 @@ h2 {
     height: 100%;
     border: none;
 }
-.nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-}
-.prev-btn {
-    left: 10px;
-}
-.next-btn {
-    right: 10px;
-}
 @media (max-width: 768px) {
     .pdf-modal-content {
         width: 90%;
@@ -169,11 +208,6 @@ video {
     height: auto;
 }
 @media (max-width: 768px) {
-    .image-bar {
-        flex-direction: column;
-        align-items: center;
-        gap: 80px;
-    }
     .youtube-embed-garden-song,
     .number-ref-sheet {
         width: 80%;
