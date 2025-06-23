@@ -4,6 +4,7 @@ const nextButton = document.getElementById("nextButton");
 const coverImage = document.getElementById("coverImage");
 const leftImage = document.getElementById("leftImage");
 const rightImage = document.getElementById("rightImage");
+const loadingIcon = document.getElementById("loadingIcon"); 
 const pages = ["img/cover.png", "img/page01.png", "img/page02.png", "img/page03.png", "img/page04.png", "img/page05.png", "img/page06.png", 
                "img/page07.png", "img/page08.png", "img/page09.png", "img/page10.png", "img/page11.png", "img/page12.png", "img/page13.png", 
                "img/page14.png"];
@@ -17,16 +18,23 @@ prevButton.style.opacity = "0.5";
 nextButton.style.opacity = "0.5";
 
 function preloadImages(callback) {
+    loadingIcon.style.display = "flex";
     pages.forEach((src) => {
         const img = new Image();
         img.src = src;
         img.onload = () => {
             imagesLoaded++;
             if (imagesLoaded === totalImages) {
+                loadingIcon.style.display = "none";
                 callback();
             }
         };
         img.onerror = () => console.error(`Failed to load image: ${src}`);
+        imagesLoaded++; // Still count errored images
+        if (imagesLoaded === totalImages) {
+            loadingIcon.style.display = "none";
+            callback();
+        }
     });
 }
 function enableButtons() {
