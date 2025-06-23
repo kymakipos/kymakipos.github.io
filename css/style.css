@@ -14,6 +14,11 @@ nav a{
     margin: 0 calc(1vw + 10px);
     cursor: url(../img/cursor2.png) 15 15, pointer;
 }
+@media (max-width: 768px) {
+    nav a {
+        font-size: smaller;
+    }
+}
 h1 {
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
