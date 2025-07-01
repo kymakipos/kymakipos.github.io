@@ -76,7 +76,7 @@ body {
     position: relative; 
 }
 #properfly {
-    position: absolute; /* js positioning */
+    position: absolute; /* uses js positioning */
     pointer-events: none; 
     z-index: 10; 
     transform: translate(-50%, -50%); 

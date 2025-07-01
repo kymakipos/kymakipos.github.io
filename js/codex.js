@@ -30,7 +30,7 @@ function preloadImages(callback) {
             }
         };
         img.onerror = () => console.error(`Failed to load image: ${src}`);
-        imagesLoaded++; // Still count errored images
+        imagesLoaded++; // still count errored images
         if (imagesLoaded === totalImages) {
             loadingIcon.style.display = "none";
             callback();

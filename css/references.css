@@ -173,8 +173,8 @@ h2 {
 .pdf-modal-content {
     position: relative;
     width: 80%;
-    max-width: 600px; /* Adjust for desired size */
-    aspect-ratio: 8.5 / 11; /* Enforces 8.5x11 proportion */
+    max-width: 600px;
+    aspect-ratio: 8.5 / 11;
     background-color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     overflow: hidden;
@@ -211,7 +211,7 @@ video {
     .youtube-embed-garden-song,
     .number-ref-sheet {
         width: 80%;
-        height: 12vh; /* Consistent height */
+        height: 12vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
