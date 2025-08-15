@@ -51,6 +51,7 @@ h2 {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.555);
 }
 
 .number-ref-sheet {
@@ -61,11 +62,16 @@ h2 {
     max-width: 420px;
 }
 .law-thumbnail { 
-    display: flex;
+    align-items: center;
     justify-content: center;
-    width: 100%;
+    margin-top: 1vh;
+}
+.pdf-thumb-img {
+    width: auto;
+    height: auto;
     max-width: 200px;
-    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 #refSheetTitle {
     margin-top: 15px;
@@ -160,12 +166,6 @@ h2 {
     }
 }
 
-.pdf-thumb-img {
-    max-width: 200px;
-    height: auto;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 .pdf-modal {
     display: none;
     position: fixed;
@@ -205,7 +205,10 @@ h2 {
 .seaberry-article {
     border: 2px solid black;
     background-color: rgba(0, 0, 0, 0.822);
-    margin-top: 2vh;
+    margin: 2vh;
+}
+.hippophae-title {
+    margin: 4px;
 }
 
 .sun-video-holder {
