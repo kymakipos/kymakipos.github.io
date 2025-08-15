@@ -1,0 +1,43 @@
+.music-video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 42vw);
+    gap: 16px;
+    width: 100%;
+    padding: 40px 10px 10px; 
+    align-items: start;
+    justify-content: center;
+}
+.music-video-chunk {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.music-video {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vid-size { width: 100%; }
+
+.video-description {
+    width: 100%;
+    padding: 12px 10px 10px 10px;
+    background-color: rgba(0, 0, 0, 0.815);
+}
+
+@media (max-width: 768px) {
+    .music-video-list {
+        grid-template-columns: repeat(auto-fill, 90vw);
+    }
+    .youtube-embed-garden-song { height: auto; }
+    .numRefSheet { width: 100%; }
+    .sun-video-holder { width: 80%; }
+}
