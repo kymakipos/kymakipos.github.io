@@ -11,13 +11,20 @@
 </head>
 <body>
     <header class="header-main">
-        <nav>
-            <a href="index.html">Index</a>
-            <a href="codex.html">Codex</a>
-            <a href="bloomhaven.html">Bloomhaven</a>
-            <a href="reference.html">Reference</a>
-            <a href="music.html">Music</a>
+        <nav class="navigation-bar">
+            <div id="mobile-index">
+                <a id="mobile-index-text" href="index.html">Index</a>
+            </div>
+            <img class="dropdown-icon" src="img/dropdownicon.png" alt="Dropdown Icon">
+            <div class="mobile-dropdown">
+                <a id="pc-index" href="index.html">Index</a>
+                <a id="mobile-codex" href="codex.html">Codex</a>
+                <a id="mobile-bloom" href="bloomhaven.html">Bloomhaven</a>
+                <a id="mobile-ref" href="reference.html">Reference</a>
+                <a id="mobile-music" href="music.html">Music</a>
+            </div>
         </nav>
+        <script src="js/navigation.js"></script>
         <section class="iframe-section">
             <iframe style="border: 0; width: 453px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2025299944/size=small/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="https://regeniversity.bandcamp.com/album/tellurica-original-soundtrack">Tellurica Original Soundtrack by Regeniversity</a></iframe>          
         </section>

@@ -54,6 +54,9 @@ h2 {
     background-color: rgba(255, 255, 255, 0.555);
 }
 
+.seaberry-article {
+        text-align: center;
+    }
 .number-ref-sheet {
     display: flex;
     flex-direction: column;
@@ -138,7 +141,7 @@ h2 {
     .reference-holder {
         flex-direction: column; 
         align-items: center;
-        gap: 25px;
+        gap: 6vh;
         margin: 0;
     }
     .number-ref-sheet {
@@ -151,13 +154,16 @@ h2 {
         height: auto; 
         max-width: 100%;
     }
+    .articles-list {
+        width: 90%;
+        align-items: center;
+    }
     .law-thumbnail {
-        width: 80%; 
-        max-width: 150px; 
+        width: 100%; 
         margin-top: 25px;
     }
     .pdf-thumb-img {
-        max-width: 150px;
+        max-width: 100%;
         height: auto;
     }
     .sun-video-holder {

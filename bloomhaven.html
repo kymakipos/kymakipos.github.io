@@ -11,13 +11,20 @@
 </head>
 <body>
     <header class="header-main">
-        <nav>
-            <a href="index.html">Index</a>
-            <a href="codex.html">Codex</a>
-            <a href="bloomhaven.html">Bloomhaven</a>
-            <a href="reference.html">Reference</a>
-            <a href="music.html">Music</a>
+        <nav class="navigation-bar">
+            <div id="mobile-index">
+                <a id="mobile-index-text" href="index.html">Index</a>
+            </div>
+            <img class="dropdown-icon" src="img/dropdownicon.png" alt="Dropdown Icon">
+            <div class="mobile-dropdown">
+                <a id="pc-index" href="index.html">Index</a>
+                <a id="mobile-codex" href="codex.html">Codex</a>
+                <a id="mobile-bloom" href="bloomhaven.html">Bloomhaven</a>
+                <a id="mobile-ref" href="reference.html">Reference</a>
+                <a id="mobile-music" href="music.html">Music</a>
+            </div>
         </nav>
+        <script src="js/navigation.js"></script>
     </header>
     <aside>
 
@@ -27,6 +34,12 @@
         <h2>Bloomhaven Group</h2>
         <style> h2{ line-height: 48px; } </style>
         <br> <br> 
+        <div class="textbox">
+            <p>
+            Bloomhaven Group is a self-organizing collaborative network and think-tank <br>
+            comprised of local teams connecting via Bloom Net (coming soon with Bloomhaven Virtual Library on IPFS).
+            </p>
+        </div>
         <div class="textbox">
             <p>
             I - Enable the actualization of human potential for good on Earth through commitment to truth, accuracy,<br>  
@@ -54,12 +67,6 @@
             IV - Curate a culture of complex consideration and human insight<br> 
             which utilizes tools as an extension of human ability guided by understanding, <br>
             rather than a substitute for human ability and understanding.<br>
-            </p>
-        </div>
-        <div class="textbox">
-            <p>
-            Bloomhaven Group is a self-organizing collaborative network and think-tank <br>
-            comprised of local teams connecting via Bloom Net (coming soon with Bloomhaven Virtual Library on IPFS).
             </p>
         </div>
     </main>

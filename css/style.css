@@ -6,6 +6,8 @@ nav {
     text-align: center;
     line-height: 7vh;
 }
+#mobile-index { display: none; }
+.dropdown-icon { display: none; }
 nav a{
     color: aquamarine;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -16,7 +18,101 @@ nav a{
 }
 @media (max-width: 768px) {
     nav a {
-        font-size: smaller;
+        font-size: x-large;
+    }
+    .navigation-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+        padding: 1vw;
+        position: relative;
+    }
+    .dropdown-icon {
+        display: flex;
+        width: 49vw;
+        height: 5vh;
+        padding: 1vw;
+        background-color: rgb(31, 8, 2);
+        border: 2px solid rgb(255, 174, 0);
+        cursor: url(../img/cursor2.png) 15 15, pointer;
+    }
+
+    .header-sub, .lang-link, #wunforesh1 {
+        position: relative;
+        z-index: 3;
+    }
+
+    .mobile-dropdown {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        z-index: 5;
+    }
+    .mobile-dropdown a {
+        display: none;
+        width: 49vw;
+        height: 5vh;
+        background-color: rgb(31, 8, 2);
+        border: 2px solid rgb(255, 174, 0);
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-dropdown.open a:not(#pc-index) {
+        display: flex;
+    }
+
+    #mobile-index {
+        display: flex;
+        width: 49vw;
+        height: 5vh;
+        background-color: rgb(31, 8, 2);
+        border: 2px solid rgb(255, 174, 0);
+        justify-content: center;
+        align-items: center;
+    }
+    #mobile-index-text {
+        width: 100%;
+        height: auto;
+    }
+    #pc-index { display: none; }
+    #mobile-codex { 
+        display: none;
+        width: 49vw;
+        height: 5vh;
+        background-color: rgb(31, 8, 2);
+        border: 2px solid rgb(255, 174, 0);
+        justify-content: center;
+        align-items: center;
+    }
+    #mobile-bloom { 
+        display: none;
+        width: 49vw;
+        height: 5vh;
+        background-color: rgb(31, 8, 2);
+        border: 2px solid rgb(255, 174, 0);
+        justify-content: center;
+        align-items: center;
+    }
+    #mobile-ref { 
+        display: none;
+        width: 49vw;
+        height: 5vh;
+        background-color: rgb(31, 8, 2);
+        border: 2px solid rgb(255, 174, 0);
+        justify-content: center;
+        align-items: center;
+    }
+    #mobile-music { 
+        display: none;
+        width: 49vw;
+        height: 5vh;
+        background-color: rgb(31, 8, 2);
+        border: 2px solid rgb(255, 174, 0);
+        justify-content: center;
+        align-items: center;
     }
 }
 h1 {
