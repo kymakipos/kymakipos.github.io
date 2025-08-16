@@ -55,8 +55,12 @@ h2 {
 }
 
 .seaberry-article {
-        text-align: center;
-    }
+    text-align: center;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.822);
+    margin: 2vh;
+    padding: 4px;
+}
 .number-ref-sheet {
     display: flex;
     flex-direction: column;
@@ -206,15 +210,6 @@ h2 {
     .pdf-thumb-img {
         max-width: 150px;
     }
-}
-
-.seaberry-article {
-    border: 2px solid black;
-    background-color: rgba(0, 0, 0, 0.822);
-    margin: 2vh;
-}
-.hippophae-title {
-    margin: 4px;
 }
 
 .sun-video-holder {

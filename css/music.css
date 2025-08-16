@@ -43,6 +43,9 @@
     flex-direction: column;
     margin: 0.5vw;
 }
+.playlist { border: 2px solid black; gap: 3px; }
+.playlist a { font-size: small; }
+.bandcamp-embed { border: 0; width: 333px; height: 360px; }
 
 @media (max-width: 768px) {
     .music-video-list {
