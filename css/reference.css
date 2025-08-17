@@ -23,14 +23,12 @@ h2 {
 }
 
 .youtube-embed-garden-song {
+    display: flex; flex-direction: column;
     position: static;        
     width: 24vw;             
     height: 33vh;            
-    padding: 0;              
-    max-width: 420px;        
-    max-height: 236px;
-    min-width: 240px;
-    min-height: 150px;
+    padding: 0;  
+    border: 2px solid black; 
 }
 .youtube-embed-garden-song iframe,
 .youtube-embed-garden-song embed {
