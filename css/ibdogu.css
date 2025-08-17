@@ -9,7 +9,7 @@ h2 {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10;
+    z-index: 2;
 }
 #ibdoguAlphabet {
     width: 36vw;
@@ -18,7 +18,7 @@ h2 {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10;
+    z-index: 2;
 }
 .constAnnounce {
     width: 99vw;
