@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const left = iconRect.left - navRect.left;
         const top = iconRect.bottom - navRect.top;
 
-        panel.style.left = `${left}px`;
+        panel.style.left = `${left - 15}px`;
         panel.style.top = `${top}px`;
         panel.style.width = `${iconRect.width}px`; // match icon width
     }
