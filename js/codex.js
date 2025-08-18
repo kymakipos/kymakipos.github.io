@@ -1,6 +1,6 @@
-//Virtual Book V1.05
-const prevButton = document.getElementById("prevButton");
-const nextButton = document.getElementById("nextButton");
+//Virtual Book V1.06
+const prevButtons = document.querySelectorAll(".page-turn-button.left");
+const nextButtons = document.querySelectorAll(".page-turn-button.right");
 const coverImage = document.getElementById("coverImage");
 const leftImage = document.getElementById("leftImage");
 const rightImage = document.getElementById("rightImage");
@@ -12,13 +12,17 @@ const pages = ["img/cover.png", "img/page01.png", "img/page02.png", "img/page03.
 let currentPage = 0;
 let imagesLoaded = 0;
 const totalImages = pages.length;
-prevButton.style.pointerEvents = "none";
-nextButton.style.pointerEvents = "none";
-prevButton.style.opacity = "0.5";
-nextButton.style.opacity = "0.5";
 
 function preloadImages(callback) {
     loadingIcon.style.display = "flex";
+    prevButtons.forEach(btn => {
+        btn.style.pointerEvents = "none";
+        btn.style.opacity = "0.5";
+    });
+    nextButtons.forEach(btn => {
+        btn.style.pointerEvents = "none";
+        btn.style.opacity = "0.5";
+    });
     pages.forEach((src) => {
         const img = new Image();
         img.src = src;
@@ -38,10 +42,14 @@ function preloadImages(callback) {
     });
 }
 function enableButtons() {
-    prevButton.style.pointerEvents = "auto";
-    nextButton.style.pointerEvents = "auto";
-    prevButton.style.opacity = "1";
-    nextButton.style.opacity = "1";
+    prevButtons.forEach(btn => {
+        btn.style.pointerEvents = "auto";
+        btn.style.opacity = "1";
+    });
+    nextButtons.forEach(btn => {
+        btn.style.pointerEvents = "auto";
+        btn.style.opacity = "1";
+    });
 }
 
 function positionGif() {
@@ -72,8 +80,8 @@ function updatePages() {
         coverImage.style.display = "block";
         leftImage.style.display = "none";
         rightImage.style.display = "none";
-        prevButton.style.display = "none";
-        nextButton.style.display = "block";
+        prevButtons.forEach(btn => btn.style.visibility = "hidden");
+        nextButtons.forEach(btn => btn.style.visibility = "visible");
         gifImage.style.display = "none";
     } else if (currentPage >= pages.length - 1) {
         // last page
@@ -82,8 +90,8 @@ function updatePages() {
         rightImage.src = pages[currentPage];
         leftImage.style.display = "block";
         rightImage.style.display = "block";
-        prevButton.style.display = "block";
-        nextButton.style.display = "none";
+        prevButtons.forEach(btn => btn.style.visibility = "visible");
+        nextButtons.forEach(btn => btn.style.visibility = "hidden");
         gifImage.style.display = "none";
     } else {
         // two-page layout
@@ -92,8 +100,8 @@ function updatePages() {
         rightImage.src = pages[currentPage];
         leftImage.style.display = "block";
         rightImage.style.display = "block";
-        prevButton.style.display = "block";
-        nextButton.style.display = "block";
+        prevButtons.forEach(btn => btn.style.visibility = "visible");
+        nextButtons.forEach(btn => btn.style.visibility = "visible");
 
         if (currentPage >= 8 && currentPage <= 9) {
             gifImage.style.display = "block";
@@ -103,17 +111,21 @@ function updatePages() {
         }
     }
 }
-nextButton.addEventListener("click", () => {
+nextButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
     if (currentPage < pages.length - 1) {
-        currentPage += 2;
-        updatePages();
+      currentPage += 2;
+      updatePages();
     }
+  });
 });
-prevButton.addEventListener("click", () => {
+prevButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
     if (currentPage > 0) {
-        currentPage -= 2; 
-        updatePages();
+      currentPage -= 2;
+      updatePages();
     }
+  });
 });
 document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight" && currentPage < pages.length - 1) {

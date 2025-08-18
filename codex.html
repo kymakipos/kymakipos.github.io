@@ -30,25 +30,25 @@
         </section>
     </header>
     <main class="main-container">
-        <button class="page-turn-button left" id="prevButton" style="display: none;">
-            <img src="img/LeftPageTurn.png" alt="Previous Page">
-        </button>
-
         <div class="loading-icon" id="loadingIcon">
             <img src="img/loading-image.gif" alt="Loading..." width="72" height="72" alt="loading image">
         </div>
 
+        <button class="page-turn-button left" id="prevButton"><img src="img/LeftPageTurn.png" alt="Previous Page"></button>
+
         <div class="center-images" id="centerImages">
-            <a href="ibdogu.html" class="langLink" style="display:none;"></a> 
-            <img src="img/page01.png" alt="Left Page" id="leftImage" style="display:none;" alt="Current Left Page of the Kymakipos Codex">
-            <img src="img/cover.png" alt="Kymakipos Cover Page" id="coverImage" style="display:none;" alt="Cover of the Kymakipos Codex">
-            <img src="img/page02.png" alt="Right Page" id="rightImage" style="display:none;" alt="Current Right Page of the Kymakipos Codex">
+            <img class="left-image" src="img/page01.png" alt="Left Page" id="leftImage" style="display:none;">
+            <img class="cover-image" src="img/cover.png" alt="Kymakipos Cover Page" id="coverImage" style="display:none;">
+            <img class="right-image" src="img/page02.png" alt="Right Page" id="rightImage" style="display:none;">
             <img id="properfly" src="img/properfly.gif" style="display: none; position: absolute;" alt="properfly animation">
         </div>
 
-        <button class="page-turn-button right" id="nextButton" style="display: none;">
-            <img src="img/RightPageTurn.png" alt="Next Page">
-        </button>
+        <button class="page-turn-button right" id="nextButton"><img src="img/RightPageTurn.png" alt="Next Page"></button>
+
+        <div class="mobile-page-turn">
+            <button class="page-turn-button left" id="mobilePrevButton"><img src="img/LeftPageTurn.png" alt="Previous Page"></button>
+            <button class="page-turn-button right" id="mobileNextButton"><img src="img/RightPageTurn.png" alt="Next Page"></button>
+        </div>
     </main>
     <script src="js/codex.js"></script>
 </body>
