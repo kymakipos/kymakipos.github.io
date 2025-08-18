@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
 }
-
 .music-video-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, 36vw);
@@ -13,6 +12,7 @@
     justify-content: center;
 }
 .music-video-chunk {
+    flex-direction: column;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -63,17 +63,22 @@
 .playlists, .playlist {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0.5vw;
 }
 .playlist { border: 2px solid black; gap: 3px; }
 .playlist a { font-size: small; }
 .bandcamp-embed { border: 0; width: 333px; height: 360px; }
 
+@media (max-width: 1440px) {
+    .main-sections { flex-direction: column; }
+    .playlist { width: 333px; height: 360px; }
+}
+
 @media (max-width: 768px) {
     .music-video-list {
-        grid-template-columns: repeat(auto-fill, 90vw);
+        grid-template-columns: repeat(auto-fit, 90vw);
     }
-    .youtube-embed-garden-song { height: auto; }
-    .numRefSheet { width: 100%; }
-    .sun-video-holder { width: 80%; }
+    .bandcamp-embed, .playlist { width: 100%; height: 360px; }
 }
