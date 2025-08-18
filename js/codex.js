@@ -7,7 +7,7 @@ const rightImage = document.getElementById("rightImage");
 const loadingIcon = document.getElementById("loadingIcon"); 
 const pages = ["img/cover.png", "img/page01.png", "img/page02.png", "img/page03.png", "img/page04.png", "img/page05.png", "img/page06.png", 
                "img/page07.png", "img/page08.png", "img/page09.png", "img/page10.png", "img/page11.png", "img/page12.png", "img/page13.png", 
-               "img/page14.png", "img/page15.png", "img/page16.png"];
+               "img/page14.png", "img/page15.png", "img/page16.png", "img/page17.png", "img/page18.png"];
 
 let currentPage = 0;
 let imagesLoaded = 0;
