@@ -12,11 +12,14 @@
     max-width: 100%; 
     height: auto;
 }
+body {
+    justify-content: center;
+}
 .main-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 99%;
+    width: 100%;
     position: relative;
     margin-top: 9vh; 
 }
