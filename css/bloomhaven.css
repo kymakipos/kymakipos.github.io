@@ -1,0 +1,18 @@
+.main-section {
+    display: flex;
+    flex-direction: row;
+}
+.tenets {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.projects {
+    display: none;    /*not displayed because projects section is currently empty*/
+    flex-direction: column;
+    width: 24vw;
+}
+
+@media (max-width: 1000px) {
+    .main-section { flex-direction: column; }
+}
