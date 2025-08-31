@@ -43,12 +43,31 @@ h2 {
     gap: 3vw;
     margin: 20px 0;
 }
+.number-ref-sheet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+}
 
+.links {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .articles-list {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.555);
+}
+.out-links {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.555);
+    padding: 4px;
 }
 
 .seaberry-article {
@@ -58,12 +77,8 @@ h2 {
     margin: 2vh;
     padding: 4px;
 }
-.number-ref-sheet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 420px;
+#wtf-1971 {
+    background-color: rgba(0, 0, 0, 0.822);
 }
 .law-thumbnail { 
     align-items: center;
