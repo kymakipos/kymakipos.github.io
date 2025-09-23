@@ -16,3 +16,9 @@
 @media (max-width: 1000px) {
     .main-section { flex-direction: column; }
 }
+
+h3 {
+    text-align: center;
+    color: white;
+    font-size: large;
+}
