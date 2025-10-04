@@ -34,8 +34,13 @@ document.addEventListener("DOMContentLoaded", function() {
         positionPanel();                // align right before showing
         panel.classList.toggle("open"); // show/hide links
     });
-    document.addEventListener("click", () => {
-        panel.classList.remove("open");
+    document.addEventListener("click", (e) => {
+        if (panel.classList.contains("open") && !panel.contains(e.target)) {
+            panel.classList.remove("open");
+            links.forEach(link => {
+                link.style.display = "none";
+            });
+        }
     });
     window.addEventListener("resize", () => {
         if (panel.classList.contains("open")) positionPanel();
