@@ -15,9 +15,10 @@ h2 {
 
 .image-bar {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12vw;
+    gap: 2vw;
     margin-top: 3vh;
 }
 

@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     const dropdownIcon = document.querySelector(".dropdown-icon");
-    const links = document.querySelectorAll("#mobile-codex, #mobile-bloom, #mobile-ref, #mobile-music");
+    const links = document.querySelectorAll("#mobile-codex, #mobile-bloom, #resource-main, #mobile-music");
     const nav = document.querySelector(".navigation-bar");
     const panel = document.querySelector(".mobile-dropdown");
+    //const resource = document.querySelector("#resource-set")
+    //const resourceToggle = document.querySelector("#resource-main");
+    //const resourceSubs = document.querySelectorAll("#mobile-ref, #finance-link");
 
     dropdownIcon.addEventListener("click", function() {
         links.forEach(link => {
