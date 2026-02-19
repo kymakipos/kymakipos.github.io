@@ -66,11 +66,17 @@ h2 {
     background-color: rgba(255, 255, 255, 0.555);
 }
 .out-links {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.555);
     padding: 2vh;
+    gap: 2px;
+}
+.out-link {
+    background-color: rgba(0, 0, 0, 0.822);
 }
 
 .seaberry-article {
@@ -79,9 +85,6 @@ h2 {
     background-color: rgba(0, 0, 0, 0.822);
     margin: 2vh;
     padding: 4px;
-}
-#wtf-1971 {
-    background-color: rgba(0, 0, 0, 0.822);
 }
 .law-thumbnail { 
     align-items: center;
@@ -94,6 +97,13 @@ h2 {
     max-width: 200px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.sun-video-holder {
+    position: static;
+    width: 15vw;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 5px;
 }
 #refSheetTitle {
     margin-top: 15px;
@@ -151,7 +161,7 @@ h2 {
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .image-bar {
         flex-direction: column;
         align-items: center;
@@ -184,6 +194,9 @@ h2 {
     .pdf-thumb-img {
         max-width: 100%;
         height: auto;
+    }
+    .out-links {
+        width: 75%;
     }
     .sun-video-holder {
         width: 80%;
@@ -227,13 +240,6 @@ h2 {
     }
 }
 
-.sun-video-holder {
-    position: static;
-    width: 15vw;
-    height: auto;
-    border: 2px solid #000;
-    border-radius: 5px;
-}
 video {
     position: relative;
     width: 100%;
